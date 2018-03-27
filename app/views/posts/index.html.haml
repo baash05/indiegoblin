@@ -1,0 +1,21 @@
+
+%table
+  %thead
+    %tr
+      %th Title
+      %th Subtitle
+      %th Body
+      %th Category
+  
+  %tbody
+    - @posts.each do |post|
+      %tr
+        %td= post.title
+        %td= post.subtitle
+        %td= post.body
+        %td= post.published
+        %td= post.category
+        
+%br
+
+= link_to 'New Post', new_post_path
